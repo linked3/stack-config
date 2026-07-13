@@ -1,28 +1,28 @@
 {
   "schemaVersion": 1,
-  "id": "stack_tags",
+  "id": "stack_config",
   "version": "${version}",
-  "name": "Stack Tags",
-  "description": "Adds item tags that set exact max stack sizes (1, 2, 4, 8, 16, 32, 64). Items in these tags will stack to the specified size across all supported loaders.",
+  "name": "Stack Config",
+  "description": "Configure per-item max stack sizes via a config file.",
   "authors": [
     "linkedto"
   ],
   "contact": {
-    "homepage": "https://github.com/linked3/stack_tags"
+    "homepage": "https://github.com/linked3/stack_config"
   },
   "license": "GPL-3.0",
-  "icon": "assets/stack_tags/icon.png",
+  "icon": "assets/stack_config/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.linkedto.stack_tags.fabric.StackTagsFabric"
+      "net.linkedto.stack_config.fabric.StackConfigFabric"
     ],
     "client": [
-      "net.linkedto.stack_tags.fabric.client.StackTagsFabricClient"
+      "net.linkedto.stack_config.fabric.client.StackConfigFabricClient"
     ]
   },
   "mixins": [
-    "stack_tags.mixins.json"
+    "stack_config.mixins.json"
   ],
   "depends": {
     "fabricloader": "*",
