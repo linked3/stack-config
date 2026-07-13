@@ -1,4 +1,4 @@
-package net.linkedto.stack_tags.mixin;
+package net.linkedto.stack_config.mixin;
 
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.entity.player.Player;
@@ -11,7 +11,6 @@ import org.spongepowered.asm.mixin.injection.Redirect;
 
 @Mixin(SolidBucketItem.class)
 public class MixinSolidBucketItem {
-
     @Redirect(
         method = "useOn",
         at = @At(

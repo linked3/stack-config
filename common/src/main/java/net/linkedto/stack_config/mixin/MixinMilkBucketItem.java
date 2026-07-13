@@ -1,4 +1,4 @@
-package net.linkedto.stack_tags.mixin;
+package net.linkedto.stack_config.mixin;
 
 import net.minecraft.advancements.CriteriaTriggers;
 import net.minecraft.server.level.ServerPlayer;
@@ -14,7 +14,6 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(MilkBucketItem.class)
 public class MixinMilkBucketItem {
-
     @Overwrite
     public ItemStack finishUsingItem(ItemStack stack, Level level, LivingEntity entity) {
         MilkBucketItem self = (MilkBucketItem) (Object) this;

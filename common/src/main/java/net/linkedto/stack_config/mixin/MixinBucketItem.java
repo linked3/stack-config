@@ -1,4 +1,4 @@
-package net.linkedto.stack_tags.mixin;
+package net.linkedto.stack_config.mixin;
 
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.BucketItem;
@@ -9,7 +9,6 @@ import org.spongepowered.asm.mixin.Overwrite;
 
 @Mixin(BucketItem.class)
 public class MixinBucketItem {
-
     @Overwrite
     public static ItemStack getEmptySuccessItem(ItemStack stack, Player player) {
         if (!player.getAbilities().instabuild) {
