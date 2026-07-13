@@ -1,0 +1,15 @@
+{
+  "required": true,
+  "package": "net.linkedto.stack_config.mixin",
+  "compatibilityLevel": "JAVA_25",
+  "minVersion": "0.8",
+  "client": [
+  ],
+  "mixins": [
+    "ItemInstanceMixin",
+    "SolidBucketItemMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
