@@ -4,23 +4,23 @@ loaderVersion = "[1,)"
 license = "GNU GPL 3.0"
 
 [[mods]]
-modId = "stack_tags"
+modId = "stack_config"
 version = "${version}"
-displayName = "Stack Tags"
+displayName = "Stack Config"
 authors = "linkedto"
 description = '''
 Adds item tags that set exact max stack sizes (1, 2, 4, 8, 16, 32, 64). Items in these tags will stack to the specified size across all supported loaders.
 '''
 #logoFile = ""
 
-[[dependencies.stack_tags]]
+[[dependencies.stack_config]]
 modId = "forge"
 mandatory = true
 versionRange = "[1,)"
 ordering = "NONE"
 side = "BOTH"
 
-[[dependencies.stack_tags]]
+[[dependencies.stack_config]]
 modId = "minecraft"
 mandatory = true
 versionRange = "[1.19.4, 1.20.4]"
