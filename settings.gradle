@@ -7,8 +7,7 @@ pluginManagement {
     }
 }
 
-rootProject.name = 'stack_tags'
+rootProject.name = 'stackable'
 
 include 'common'
 include 'fabric'
-include 'forge'
