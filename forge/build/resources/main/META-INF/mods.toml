@@ -1,0 +1,29 @@
+modLoader = "javafml"
+loaderVersion = "[47,)"
+#issueTrackerURL = ""
+license = "GNU GPL 3.0"
+
+[[mods]]
+modId = "stack_tags"
+version = "1.0-SNAPSHOT"
+displayName = "Stack Tags"
+authors = "linkedto"
+description = '''
+Adds item tags that set exact max stack sizes (1, 2, 4, 8, 16, 32, 64). Items in these tags will stack to the specified size across all supported loaders.
+'''
+#logoFile = ""
+
+[[dependencies.stack_tags]]
+modId = "forge"
+mandatory = true
+versionRange = "[47,)"
+ordering = "NONE"
+side = "BOTH"
+
+[[dependencies.stack_tags]]
+modId = "minecraft"
+mandatory = true
+versionRange = "[1.20.1,)"
+ordering = "NONE"
+side = "BOTH"
+

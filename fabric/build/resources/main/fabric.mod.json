@@ -1,0 +1,35 @@
+{
+  "schemaVersion": 1,
+  "id": "stack_tags",
+  "version": "1.0-SNAPSHOT",
+  "name": "Stack Tags",
+  "description": "Adds item tags that set exact max stack sizes (1, 2, 4, 8, 16, 32, 64). Items in these tags will stack to the specified size across all supported loaders.",
+  "authors": [
+    "linkedto"
+  ],
+  "contact": {
+    "homepage": "https://github.com/linked3/StackTags"
+  },
+  "license": "GPL-3.0",
+  "icon": "assets/stack_tags/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.linkedto.stack_tags.fabric.StackTagsFabric"
+    ],
+    "client": [
+      "net.linkedto.stack_tags.fabric.client.StackTagsFabricClient"
+    ]
+  },
+  "mixins": [
+    "stack_tags.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.18.4",
+    "minecraft": "~1.20.1",
+    "java": ">=17"
+  },
+  "suggests": {
+    "another-mod": "*"
+  }
+}

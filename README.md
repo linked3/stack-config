@@ -1,21 +1,37 @@
-# Stackable
+# Stack Tags
 
-Stackable lets you control item stack sizes using a JSON config file.
+Stack Tags lets you control item stack sizes using data packs. Place items into one of several tags to set their exact max stack size.
 
 ## What it does
-- Generates a config file at `config/stackable.json` on first run.
-- Edit the file to set exact max stack sizes for any item or tag.
+- Adds item tags that set exact max stack sizes: `stack_tags:stackable_to_1`, `stack_tags:stackable_to_2`, `stack_tags:stackable_to_4`, `stack_tags:stackable_to_8`, `stack_tags:stackable_to_16`, `stack_tags:stackable_to_32`, `stack_tags:stackable_to_64`.
+- If an item is present in multiple tags, the largest value wins.
 - Values are clamped to 64.
 
 ## How to use
-Edit `config/stackable.json` to add entries:
+Add your items to the desired tag(s) via a data pack:
 
-```json
+```
+data/stack_tags/tags/items/stackable_to_16.json
 {
-  "minecraft:lava_bucket": 16,
-  "minecraft:water_bucket": 16,
-  "#minecraft:wool": 64
+  "replace": false,
+  "values": [
+    "minecraft:lava_bucket",
+    "minecraft:water_bucket"
+  ]
 }
 ```
 
-Remove the file to regenerate defaults.
+Or replace the default behavior of the mod to set up your custom max stack sizes:
+
+```
+data/stack_tags/tags/items/stackable_to_16.json
+{
+  "replace": true,
+  "values": [
+    "minecraft:golden_apple",
+    "minecraft:enchanted_golden_apple"
+  ]
+}
+```
+
+You can create similar files for `stackable_to_1`, `2`, `4`, `8`, `32`, and `64`.

@@ -1,0 +1,21 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:armor_stand",
+    "minecraft:decorated_pot",
+    "minecraft:ender_pearl",
+    "#minecraft:banners",
+    "minecraft:egg",
+    "minecraft:snowball",
+    "minecraft:honey_bottle",
+    "#minecraft:banners",
+    "minecraft:creeper_banner_pattern",
+    "minecraft:flower_banner_pattern",
+    "minecraft:globe_banner_pattern",
+    "minecraft:mojang_banner_pattern",
+    "minecraft:piglin_banner_pattern",
+    "minecraft:skull_banner_pattern",
+    "#minecraft:signs",
+    "minecraft:writable_book"
+  ]
+}

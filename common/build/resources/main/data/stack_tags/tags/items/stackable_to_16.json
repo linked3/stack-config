@@ -1,0 +1,30 @@
+{
+  "replace": false,
+  "values": [
+    "minecraft:potion",
+    "minecraft:lingering_potion",
+    "minecraft:splash_potion",
+    "minecraft:saddle",
+    "#minecraft:boats",
+    "#minecraft:beds",
+    "#minecraft:music_discs",
+    "minecraft:enchanted_book",
+    "minecraft:milk_bucket",
+    "minecraft:bucket",
+    "minecraft:beetroot_soup",
+    "minecraft:suspicious_stew",
+    "minecraft:mushroom_stew",
+    "minecraft:rabbit_stew",
+    "minecraft:leather_horse_armor",
+    "minecraft:iron_horse_armor",
+    "minecraft:golden_horse_armor",
+    "minecraft:diamond_horse_armor",
+    "minecraft:cake",
+    "minecraft:chest_minecart",
+    "minecraft:command_block_minecart",
+    "minecraft:furnace_minecart",
+    "minecraft:hopper_minecart",
+    "minecraft:minecart",
+    "minecraft:tnt_minecart"
+  ]
+}
