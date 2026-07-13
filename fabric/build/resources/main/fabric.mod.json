@@ -1,35 +1,35 @@
 {
   "schemaVersion": 1,
-  "id": "stack_tags",
-  "version": "1.0-SNAPSHOT",
-  "name": "Stack Tags",
-  "description": "Adds item tags that set exact max stack sizes (1, 2, 4, 8, 16, 32, 64). Items in these tags will stack to the specified size across all supported loaders.",
+  "id": "stack_config",
+  "version": "0.1.0",
+  "name": "Stack Config",
+  "description": "Configure per-item max stack sizes via a config file.",
   "authors": [
     "linkedto"
   ],
   "contact": {
-    "homepage": "https://github.com/linked3/StackTags"
+    "homepage": "https://github.com/linked3/linked-hearts"
   },
   "license": "GPL-3.0",
-  "icon": "assets/stack_tags/icon.png",
+  "icon": "assets/stack_config/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "net.linkedto.stack_tags.fabric.StackTagsFabric"
+      "net.linkedto.stack_config.fabric.StackConfigFabric"
     ],
     "client": [
-      "net.linkedto.stack_tags.fabric.client.StackTagsFabricClient"
+      "net.linkedto.stack_config.fabric.client.StackConfigFabricClient"
     ]
   },
   "mixins": [
-    "stack_tags.mixins.json"
+    "stack_config.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.18.4",
-    "minecraft": "~1.20.1",
-    "java": ">=17"
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~26.2",
+    "java": ">=25",
+    "fabric-api": "*",
+    "cloth-config2": ">=26.2.155"
   },
-  "suggests": {
-    "another-mod": "*"
-  }
+  "suggests": {}
 }

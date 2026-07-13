@@ -2,3 +2,10 @@ dependencies {
     implementation "net.fabricmc:fabric-loader:$rootProject.fabric_loader_version"
     implementation "me.shedaniel.cloth:cloth-config-fabric:$rootProject.cloth_config_version"
 }
+
+["runClient", "runServer", "configureClient", "configureServer"].each { name ->
+    tasks.matching { it.name == name }.configureEach {
+        onlyIf { false }
+        doFirst { throw new GradleException("This task is not available for the :common module") }
+    }
+}
