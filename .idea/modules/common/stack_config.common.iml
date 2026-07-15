@@ -5,14 +5,9 @@
       <configuration>
         <autoDetectTypes>
           <platformType>ARCHITECTURY</platformType>
-          <platformType>MIXIN</platformType>
-          <platformType>MCP</platformType>
         </autoDetectTypes>
         <projectReimportVersion>1</projectReimportVersion>
       </configuration>
     </facet>
-  </component>
-  <component name="McpModuleSettings">
-    <option name="minecraftVersion" value="26.2" />
   </component>
 </module>

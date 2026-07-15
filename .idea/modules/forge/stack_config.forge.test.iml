@@ -4,7 +4,7 @@
     <facet type="minecraft" name="Minecraft">
       <configuration>
         <autoDetectTypes>
-          <platformType>ARCHITECTURY</platformType>
+          <platformType>FORGE</platformType>
           <platformType>MIXIN</platformType>
           <platformType>MCP</platformType>
         </autoDetectTypes>
@@ -13,6 +13,6 @@
     </facet>
   </component>
   <component name="McpModuleSettings">
-    <option name="minecraftVersion" value="26.2" />
+    <option name="srgType" value="SRG" />
   </component>
 </module>
