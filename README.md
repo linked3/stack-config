@@ -1,9 +1,34 @@
 # Stack Config
 
-Configure per-item max stack sizes via a JSON config file.
+Set custom max stack sizes for any item.
 
-## What it does
-- Generates a config file at `config/stack_config.json` on first run.
-- Edit the file to set exact max stack sizes for any item or tag.
-- Supports both Fabric and Forge.
-- Handles bucket items correctly when stacked.
+## How it works
+
+Drop `config/stack_config.json` into your config folder and set stack sizes however you like — by item ID or by tag. The mod hooks into `ItemInstance.getMaxStackSize` to override the vanilla limit at the source.
+
+## Features
+
+- **Per-item and per-tag** — use `minecraft:ender_pearl` to target a single item or `#minecraft:boats` to catch everything in a tag.
+- **Sensible defaults** — potions, buckets, minecarts, horse armour, banners, signs, stews, and everything else vanilla limits to 1 or 16 are preconfigured to stack to 16 or 64. First run generates the file with these as a starting point.
+- **Bucket behaviour** — placing a stacked solid bucket (powder snow, azalea, etc.) leaves the empty bucket in your hand and adds extras to inventory, so you don't lose items to the usual "bucket returns to hand" logic.
+- **Config reload** — edit the file any time; changes apply on the next `getMaxStackSize` call without a restart.
+
+## Config format
+
+```json
+{
+  "minecraft:ender_pearl": 64,
+  "minecraft:saddle": 64,
+  "#minecraft:beds": 64
+}
+```
+
+Items not listed keep their vanilla stack size. Prefix with `#` to match a tag.
+
+## Versions
+
+| Release | Loader | MC |
+|---|---|---|
+| [v1.1](https://github.com/linked3/stack-config/releases/tag/v1.1) | Fabric | 26.2 |
+| | Fabric, Forge | 1.20.1 |
+| | Fabric, Forge | 1.18.2 |
