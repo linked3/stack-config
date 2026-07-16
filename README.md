@@ -22,13 +22,5 @@ Drop `config/stack_config.json` into your config folder and set stack sizes howe
   "#minecraft:beds": 64
 }
 ```
-
-Items not listed keep their vanilla stack size. Prefix with `#` to match a tag.
-
-## Versions
-
-| Release | Loader | MC |
-|---|---|---|
-| [v1.1](https://github.com/linked3/stack-config/releases/tag/v1.1) | Fabric | 26.2 |
-| | Fabric, Forge | 1.20.1 |
-| | Fabric, Forge | 1.18.2 |
+Prefix with `#` to match a tag.
+---
