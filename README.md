@@ -1,37 +1,34 @@
 # Stack Config
 
-Stack Config lets you control item stack sizes using data packs. Place items into one of several tags to set their exact max stack size.
+Set custom max stack sizes for any item.
 
-## What it does
-- Adds item tags that set exact max stack sizes: `stack_config:stackable_to_1`, `stack_config:stackable_to_2`, `stack_config:stackable_to_4`, `stack_config:stackable_to_8`, `stack_config:stackable_to_16`, `stack_config:stackable_to_32`, `stack_config:stackable_to_64`.
-- If an item is present in multiple tags, the largest value wins.
-- Values are clamped to 64.
+## How it works
 
-## How to use
-Add your items to the desired tag(s) via a data pack:
+Drop `config/stack_config.json` into your config folder and set stack sizes however you like — by item ID or by tag. The mod hooks into `ItemInstance.getMaxStackSize` to override the vanilla limit at the source.
 
-```
-data/stack_config/tags/items/stackable_to_16.json
+## Features
+
+- **Per-item and per-tag** — use `minecraft:ender_pearl` to target a single item or `#minecraft:boats` to catch everything in a tag.
+- **Sensible defaults** — potions, buckets, minecarts, horse armour, banners, signs, stews, and everything else vanilla limits to 1 or 16 are preconfigured to stack to 16 or 64. First run generates the file with these as a starting point.
+- **Bucket behaviour** — placing a stacked solid bucket (powder snow, azalea, etc.) leaves the empty bucket in your hand and adds extras to inventory, so you don't lose items to the usual "bucket returns to hand" logic.
+- **Config reload** — edit the file any time; changes apply on the next `getMaxStackSize` call without a restart.
+
+## Config format
+
+```json
 {
-  "replace": false,
-  "values": [
-    "minecraft:lava_bucket",
-    "minecraft:water_bucket"
-  ]
+  "minecraft:ender_pearl": 64,
+  "minecraft:saddle": 64,
+  "#minecraft:beds": 64
 }
 ```
 
-Or replace the default behavior of the mod to set up your custom max stack sizes:
+Items not listed keep their vanilla stack size. Prefix with `#` to match a tag.
 
-```
-data/stack_config/tags/items/stackable_to_16.json
-{
-  "replace": true,
-  "values": [
-    "minecraft:golden_apple",
-    "minecraft:enchanted_golden_apple"
-  ]
-}
-```
+## Versions
 
-You can create similar files for `stackable_to_1`, `2`, `4`, `8`, `32`, and `64`.
+| Release | Loader | MC |
+|---|---|---|
+| [v1.1](https://github.com/linked3/stack-config/releases/tag/v1.1) | Fabric | 26.2 |
+| | Fabric, Forge | 1.20.1 |
+| | Fabric, Forge | 1.18.2 |
